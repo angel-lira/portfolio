@@ -1,0 +1,22 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+
+let projects = [
+  { title: "Color", body: "Yellow" },
+  { title: "Color", body: "Blue" },
+  { title: "Color", body: "Red" },
+  { title: "Color", body: "Green" },
+  { title: "Color", body: "Purple" },
+];
+---
+
+<Layout title="Portfolio">
+  <main>
+    {
+      projects?.map((item) => (
+        <Card href="#" title={item.title} body={item.body} />
+      ))
+    }
+  </main>
+</Layout>
