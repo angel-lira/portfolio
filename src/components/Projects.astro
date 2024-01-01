@@ -1,0 +1,90 @@
+---
+import Project from "./Project.astro";
+const projects = [
+  {
+    title: "TaskPro",
+    description: `Es una aplicación que permite agregar, editar y eliminar tareas fácilmente`,
+    image:
+      "https://res.cloudinary.com/dpmw1yvfi/image/upload/v1704075487/rwifvysbtmomsb3bbciu.png",
+    url: "https://taskpro-v1.vercel.app/",
+    tags: [
+      "HTML",
+      "CSS",
+      "Tailwind",
+      "JavaScript",
+      "React",
+      "Redux",
+      "Node.js",
+      "Express.js",
+      "PostgreSQL",
+      "Sequelize",
+    ],
+    boolean: true,
+  },
+  {
+    title: "Drivers App",
+    description: `SPA (Single Page Application) que proporciona informacion detallada
+            de los pilotos de Formula 1, permitiendo agregar nuevos conductores,
+            filtar por equipos y ordenar alfabeticamente y por fecha de
+            nacimiento.`,
+    image:
+      "https://res.cloudinary.com/dpmw1yvfi/image/upload/v1698106418/yofzjdu0u1aigculvjmw.png",
+    url: "https://github.com/angel-lira/Drivers-App.git",
+    tags: [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "React",
+      "Redux",
+      "Node.js",
+      "Express.js",
+      "PostgreSQL",
+      "Sequelize",
+    ],
+    boolean: false,
+  },
+  {
+    title: "Integration Project",
+    description: `SPA (Single Page Application) que proporciona informacion detallada
+            sobre los personajes de la serie de television Rick y Morty. Permite
+            a los usuarios explorar y marcar personajes como favoritos, asi como
+            acceder a informacion detallada de los mismos`,
+    image:
+      "https://res.cloudinary.com/dpmw1yvfi/image/upload/v1698106418/rv0vv5pokssfestrnbxr.png",
+    url: "https://github.com/angel-lira/Integration-Project.git",
+    tags: [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "React",
+      "Redux",
+      "Node.js",
+      "Express.js",
+      "PostgreSQL",
+      "Sequelize",
+    ],
+    boolean: false,
+  },
+];
+---
+
+<div class="mx-auto max-w-screen-lg px-3 py-6">
+  <div class="mb-6 text-2xl font-bold">
+    <div class="flex">
+      <h1 class="text-gray-200 hover:text-white">Proyectos</h1>
+    </div>
+  </div><div class="grid grid-cols-1 gap-6 md:grid-cols-3">
+    {
+      projects.map((item) => (
+        <Project
+          title={item.title}
+          description={item.description}
+          tags={item.tags}
+          image={item.image}
+          url={item.url}
+          boolean={item.boolean}
+        />
+      ))
+    }
+  </div>
+</div>
