@@ -1,0 +1,86 @@
+---
+let skills = [
+  {
+    alt: "Astro",
+    image:
+      "https://res.cloudinary.com/dpmw1yvfi/image/upload/v1704074005/skills/vr8qqfyjgs8bstn4xxme.png",
+  },
+  {
+    alt: "Next.js",
+    image:
+      "https://res.cloudinary.com/dpmw1yvfi/image/upload/v1704074006/skills/tyr4dyscjoi8ntlcjvik.png",
+  },
+  {
+    alt: "HTML",
+    image:
+      "https://res.cloudinary.com/dpmw1yvfi/image/upload/v1704074005/skills/iimjhwlmg8qdqft5srvp.png",
+  },
+  {
+    alt: "CSS",
+    image:
+      "https://res.cloudinary.com/dpmw1yvfi/image/upload/v1704074005/skills/pkzzsuh0qtfaqkefb3ni.png",
+  },
+  {
+    alt: "Tailwind",
+    image:
+      "https://res.cloudinary.com/dpmw1yvfi/image/upload/v1704074006/skills/nwde3aoadpomhlqfjq9q.png",
+  },
+  {
+    alt: "JavaScript",
+    image:
+      "https://res.cloudinary.com/dpmw1yvfi/image/upload/v1704074005/skills/fh2cfnshrkwpeu1n39fj.png",
+  },
+  {
+    alt: "TypeScript",
+    image:
+      "https://res.cloudinary.com/dpmw1yvfi/image/upload/v1704074006/skills/sj8silhm8riyt6n8wzwf.png",
+  },
+  {
+    alt: "React",
+    image:
+      "https://res.cloudinary.com/dpmw1yvfi/image/upload/v1704074006/skills/fjeupc7fwyomkgna7kh6.png",
+  },
+  {
+    alt: "Redux",
+    image:
+      "https://res.cloudinary.com/dpmw1yvfi/image/upload/v1704074006/skills/tjmombfbcgn59ugrlyck.png",
+  },
+  {
+    alt: "Node.js",
+    image:
+      "https://res.cloudinary.com/dpmw1yvfi/image/upload/v1704074005/skills/vfinzoodnxt7gmibimnf.png",
+  },
+  {
+    alt: "Sequelize",
+    image:
+      "https://res.cloudinary.com/dpmw1yvfi/image/upload/v1704074006/skills/x0oweqjqkmsdvbhnz2ym.png",
+  },
+  {
+    alt: "Postgresql",
+    image:
+      "https://res.cloudinary.com/dpmw1yvfi/image/upload/v1704074006/skills/uxycmvhn8hppvbr2enzo.png",
+  },
+  {
+    alt: "Git",
+    image:
+      "https://res.cloudinary.com/dpmw1yvfi/image/upload/v1704074005/skills/ncrdwsrs7fjhtny8jstz.png",
+  },
+];
+---
+
+<div class="mx-auto max-w-screen-lg px-3 py-6">
+  <div class="mb-6 text-2xl font-bold text-gray-200">Habilidades Técnicas</div>
+
+  <div class="shrink-0 flex gap-4 flex-wrap">
+    {
+      skills.map((item) => (
+        <img
+          class="h-14 w-14 hover:translate-y-1"
+          src={item.image}
+          alt={item.alt}
+          loading="lazy"
+        />
+      ))
+    }
+  </div>
+</div>
